@@ -17,6 +17,7 @@ import com.iservice.opet.iservice.R;
  */
 
 public class CadastrarUsuarioActivity extends Activity {
+
     private EditText editNome;
     private EditText editCpf;
     private EditText editEmail;
