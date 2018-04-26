@@ -24,14 +24,13 @@ public class CadastrarUsuarioActivity extends Activity {
     private EditText editSenhaConfirma;
     private EditText editTelefone;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_usuario);
 
-        editNome = (EditText) findViewById(R.id.editNomeSistema);
-        editCpf = (EditText) findViewById(R.id.editVersaoSistema);
+        editNome = (EditText) findViewById(R.id.editNome);
+        editCpf = (EditText) findViewById(R.id.editCpf);
         editEmail = (EditText) findViewById(R.id.editEmail);
         editSenha = (EditText) findViewById(R.id.editSenha);
         editSenhaConfirma = (EditText) findViewById(R.id.editSenhaConfirma);
@@ -43,22 +42,26 @@ public class CadastrarUsuarioActivity extends Activity {
         Usuario usuario = new Usuario();
         usuario.setNome(editNome.getText().toString());
         usuario.setCpf(editCpf.getText().toString());
+        usuario.setEmail(editEmail.getText().toString());
+        usuario.setSenha(editSenha.getText().toString());
+        usuario.setTelefone(editTelefone.getText().toString());
 
-        long resultado = usuarioDAO.cadastrarUsuario(usuario);
-
-        if(resultado > 0){
-            exibirMensagem("Usuario cadastrado com sucesso!");
-            Intent listarUsuarios = new Intent(CadastrarUsuarioActivity.this,MainActivity.class);
-            startActivity(listarUsuarios);
-            finish();
-        }
-        else{
-            exibirMensagem("Erro ao cadastrar o usuario!.");
+        if(!editSenha.getText().toString().equals(editSenhaConfirma.getText().toString())){
+            exibirMensagem("As senhas devem ser iguais!!.");
+        }else{
+            long resultado = usuarioDAO.cadastrarUsuario(usuario);
+            if(resultado > 0){
+                exibirMensagem("Usuario cadastrado com sucesso!");
+                Intent listarUsuarios = new Intent(CadastrarUsuarioActivity.this,MainActivity.class);
+                startActivity(listarUsuarios);
+                finish();
+            }
+            else{
+                exibirMensagem("Erro ao cadastrar o usuario!.");
+            }
         }
     }
-
     private void exibirMensagem(String mensagem){
         Toast.makeText(this, mensagem, Toast.LENGTH_SHORT).show();
     }
-
 }
