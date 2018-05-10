@@ -23,7 +23,6 @@ import java.util.List;
  */
 
 public class UsuarioAdapter extends ArrayAdapter<Usuario> {
-
     private int resource;
     private List<Usuario> usuarios;
 

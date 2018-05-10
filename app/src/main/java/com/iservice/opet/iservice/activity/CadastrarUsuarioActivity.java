@@ -15,9 +15,7 @@ import com.iservice.opet.iservice.R;
 /**
  * Created by Rafael on 25/04/2018.
  */
-
 public class CadastrarUsuarioActivity extends Activity {
-
     private EditText editNome;
     private EditText editCpf;
     private EditText editEmail;
@@ -29,7 +27,6 @@ public class CadastrarUsuarioActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_usuario);
-
         editNome = (EditText) findViewById(R.id.editNome);
         editCpf = (EditText) findViewById(R.id.editCpf);
         editEmail = (EditText) findViewById(R.id.editEmail);
@@ -53,8 +50,8 @@ public class CadastrarUsuarioActivity extends Activity {
             long resultado = usuarioDAO.cadastrarUsuario(usuario);
             if(resultado > 0){
                 exibirMensagem("Usuario cadastrado com sucesso!");
-                Intent listarUsuarios = new Intent(CadastrarUsuarioActivity.this,MainActivity.class);
-                startActivity(listarUsuarios);
+                Intent intent = new Intent(CadastrarUsuarioActivity.this, HomeUsuarioActivity.class);
+                startActivity(intent);
                 finish();
             }
             else{
