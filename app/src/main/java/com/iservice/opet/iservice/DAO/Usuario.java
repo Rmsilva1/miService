@@ -1,6 +1,5 @@
 package com.iservice.opet.iservice.DAO;
 
-
 public class Usuario {
     private int id;
     private Boolean isTecnico;

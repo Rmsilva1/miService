@@ -8,9 +8,16 @@
     tools:context="com.iservice.opet.iservice.MainActivity">
 
     <Button
-        android:id="@+id/btnAcessaCadastrarSistema"
-        android:onClick="redirecionarCadastrarUsuario"
+        android:id="@+id/btnCadastrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cadastrar Usuario"/>
+        android:onClick="redirecionarCadastroActivty"
+        android:text="Cadastrar Usuario" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="redirecionarLoginActivity"
+        android:text="Logar" />
 </LinearLayout>

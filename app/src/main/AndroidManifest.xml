@@ -30,5 +30,13 @@
                 <category android:name="android.intent.categeory.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.iService.LoginActivity"/>
+                <category android:name="android.intent.categeory.LAUNCHER"/>
+            </intent-filter>
+        </activity>
     </application>
 </manifest>

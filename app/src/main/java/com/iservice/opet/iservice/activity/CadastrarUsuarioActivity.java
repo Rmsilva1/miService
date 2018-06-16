@@ -36,19 +36,17 @@ public class CadastrarUsuarioActivity extends Activity {
     }
 
     public void cadastrarUsuario(View v){
-        UsuarioDAO usuarioDAO = new UsuarioDAO(this);
         Usuario usuario = new Usuario();
         usuario.setNome(editNome.getText().toString());
         usuario.setCpf(editCpf.getText().toString());
         usuario.setEmail(editEmail.getText().toString());
         usuario.setSenha(editSenha.getText().toString());
         usuario.setTelefone(editTelefone.getText().toString());
-
         if(!editSenha.getText().toString().equals(editSenhaConfirma.getText().toString())){
             exibirMensagem("As senhas devem ser iguais!!.");
         }else{
-            long resultado = usuarioDAO.cadastrarUsuario(usuario);
-            if(resultado > 0){
+            UsuarioDAO usuarioDAO = new UsuarioDAO(this);
+            if(usuarioDAO.cadastrarUsuario(usuario)){
                 exibirMensagem("Usuario cadastrado com sucesso!");
                 Intent intent = new Intent(CadastrarUsuarioActivity.this, HomeUsuarioActivity.class);
                 startActivity(intent);
@@ -61,5 +59,10 @@ public class CadastrarUsuarioActivity extends Activity {
     }
     private void exibirMensagem(String mensagem){
         Toast.makeText(this, mensagem, Toast.LENGTH_SHORT).show();
+    }
+
+    public void redirecionarMainActivity(View v){
+        Intent intent = new Intent(CadastrarUsuarioActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 }

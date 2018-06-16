@@ -24,4 +24,9 @@ public class HomeUsuarioActivity extends Activity {
        // Intent intent = new Intent(HomeUsuarioActivity.this,CadastrarUsuarioActivity.class);
       //  startActivity(intent);
     }
+
+    public void redirecionarMainActivity(View v){
+        Intent intent = new Intent(HomeUsuarioActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
 }

@@ -18,15 +18,15 @@ import java.util.List;
  */
 
 public class UsuarioDAO {
-    private SQLiteDatabase db;
-    private DatabaseFactory banco;
+    private static SQLiteDatabase db;
+    private static DatabaseFactory banco;
 
 
     public UsuarioDAO(Context context) {
         banco = new DatabaseFactory(context);
     }
 
-    public long cadastrarUsuario(Usuario usuario) {
+    public Boolean cadastrarUsuario(Usuario usuario) {
         ContentValues valores;
         long resultado;
 
@@ -42,7 +42,25 @@ public class UsuarioDAO {
         resultado = db.insert(BancoUtil.NOME_TABELA_USUARIOS, null, valores);
         db.close();
 
-        return resultado;
+        return true;
+    }
+
+    public Boolean validaLoginUsuario(String email, String senha){
+        Cursor cursor;
+        String[] campos = {BancoUtil.USUARIOS_EMAIL, BancoUtil.USUARIOS_SENHA};
+        db = banco.getReadableDatabase();
+        String where = BancoUtil.USUARIOS_EMAIL + " = " + "'" + email + "'";
+        cursor = db.query(BancoUtil.NOME_TABELA_USUARIOS, campos, where,  null, null, null, null, null);
+
+        if (cursor != null && cursor.moveToFirst()) {
+            if(senha.equals(cursor.getString(cursor.getColumnIndexOrThrow(BancoUtil.USUARIOS_SENHA)))) {
+                db.close();
+                cursor.close();
+                return true;
+            }
+        }
+        db.close();
+        return false;
     }
 
     public Usuario consultaUsuarioPorId(Integer id){
@@ -93,7 +111,6 @@ public class UsuarioDAO {
     public List<Usuario> carregaDadosLista() {
         Cursor cursor;
         cursor = carregaDados();
-
         List<Usuario> usuarios = new ArrayList<>();
 
         try {

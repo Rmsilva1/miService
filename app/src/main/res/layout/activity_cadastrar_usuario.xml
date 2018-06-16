@@ -28,12 +28,14 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         android:id="@+id/editSenha"
         android:hint="Senha"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editSenhaConfirma"
+        android:inputType="textPassword"
         android:hint="Senha Confirma"/>
     <EditText
         android:layout_width="match_parent"
@@ -46,5 +48,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Salvar"/>
-
+    <Button
+        android:onClick="redirecionarMainActivity"
+        android:id="@+id/btnVoltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voltar"/>
 </LinearLayout>
