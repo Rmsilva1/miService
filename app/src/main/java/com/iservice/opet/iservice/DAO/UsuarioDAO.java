@@ -107,7 +107,6 @@ public class UsuarioDAO {
         return cursor;
     }
 
-
     public List<Usuario> carregaDadosLista() {
         Cursor cursor;
         cursor = carregaDados();
@@ -119,14 +118,9 @@ public class UsuarioDAO {
                     Usuario usuario = new Usuario();
                     int ID = cursor.getInt(cursor.getColumnIndexOrThrow(BancoUtil.USUARIO_ID));
                     String nome = cursor.getString(cursor.getColumnIndexOrThrow(BancoUtil.USUARIOS_NOME));
-                    String cpf = cursor.getString(cursor.getColumnIndexOrThrow(BancoUtil.USUARIOS_CPF));
-                    String email = cursor.getString(cursor.getColumnIndexOrThrow(BancoUtil.USUARIOS_EMAIL));
 
                     usuario.setId(ID);
                     usuario.setNome(nome);
-                    usuario.setCpf(cpf);
-                    usuario.setEmail(email);
-
                     usuarios.add(usuario);
                 } while (cursor.moveToNext());
             }

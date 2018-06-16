@@ -29,4 +29,9 @@ public class HomeUsuarioActivity extends Activity {
         Intent intent = new Intent(HomeUsuarioActivity.this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void redirecionarListarUsuarios(View v){
+        Intent intent = new Intent(HomeUsuarioActivity.this, ListarTodosUsuariosActivity.class);
+        startActivity(intent);
+    }
 }
