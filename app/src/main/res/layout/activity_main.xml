@@ -20,4 +20,18 @@
         android:layout_height="wrap_content"
         android:onClick="redirecionarLoginActivity"
         android:text="Logar" />
+
+    <Button
+        android:id="@+id/btnSalvarCarro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="salvarCarro"
+        android:text="Salvar Carro" />
+
+    <ProgressBar
+        android:id="@+id/progressDB"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>
