@@ -5,6 +5,7 @@ public class Usuario {
     private Boolean isTecnico;
     private String nome;
     private String cpf;
+    private String endereco;
     private String email;
     private String senha;
     private String telefone;
@@ -41,6 +42,14 @@ public class Usuario {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     public String getEmail() {

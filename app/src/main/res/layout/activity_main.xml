@@ -11,15 +11,8 @@
         android:id="@+id/btnCadastrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="redirecionarCadastroActivty"
-        android:text="Cadastrar Usuario" />
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="redirecionarLoginActivity"
-        android:text="Logar" />
+        android:onClick="signIn"
+        android:text="Logar / Registrar" />
 
     <Button
         android:id="@+id/btnSalvarCarro"

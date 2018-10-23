@@ -11,9 +11,9 @@
         android:id="@+id/btnAcessaCadastrarServico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="328dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="296dp"
         android:onClick="redirecionarCadastrarServico"
         android:text="Cadastrar Servico "
         app:layout_constraintBottom_toBottomOf="parent"
@@ -40,10 +40,10 @@
         android:id="@+id/btnListarUsuarios"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:onClick="redirecionarListarUsuarios"
         android:text="Listar Todos os Usuarios"
         app:layout_constraintBottom_toTopOf="@+id/btnAcessaCadastrarServico"
@@ -51,7 +51,7 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542" />
+        app:layout_constraintVertical_bias="0.223" />
 
     <Button
         android:id="@+id/btnVoltar"
@@ -61,10 +61,42 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:onClick="redirecionarMainActivity"
-        android:text="Voltar"
+        android:onClick="logOut"
+        android:text="Deslogar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAcessaEditarServico" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="redirecionarAlterarSenha"
+        android:text="Alterar Senha"
+        app:layout_constraintBottom_toBottomOf="@+id/btnVoltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAcessaEditarServico"
+        app:layout_constraintVertical_bias="0.194"
+        tools:text="Alterar Senha" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="redirecionarDadosCadastraisActivity"
+        android:text="Meus dados Cadastrais"
+        app:layout_constraintBottom_toTopOf="@+id/btnAcessaCadastrarServico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </android.support.constraint.ConstraintLayout>
