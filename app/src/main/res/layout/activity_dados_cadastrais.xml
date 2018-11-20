@@ -19,24 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_width="348dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="7dp"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            android:text="Email"
-            app:layout_constraintBottom_toTopOf="@+id/editTextUserTel"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-
         <EditText
             android:id="@+id/editTextUserTel"
             android:layout_width="349dp"
@@ -51,7 +33,7 @@
             app:layout_constraintBottom_toTopOf="@+id/editTextUserCpf"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <EditText
             android:id="@+id/editTextUserCpf"
@@ -108,6 +90,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="56dp"
             android:layout_marginBottom="8dp"
+            android:onClick="redirecionarHomeUsuario"
             android:text="Voltar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -118,7 +101,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:onClick="salvarEdicao"
+            android:onClick="editarUsuario"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:text="Salvar"
@@ -126,7 +109,6 @@
             app:layout_constraintEnd_toStartOf="@+id/button3"
             app:layout_constraintHorizontal_bias="0.26"
             app:layout_constraintStart_toStartOf="parent" />
-
     </android.support.v7.widget.LinearLayoutCompat>
 
     <TextView

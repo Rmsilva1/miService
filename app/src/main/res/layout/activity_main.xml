@@ -14,13 +14,6 @@
         android:onClick="signIn"
         android:text="Logar / Registrar" />
 
-    <Button
-        android:id="@+id/btnSalvarCarro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="salvarCarro"
-        android:text="Salvar Carro" />
-
     <ProgressBar
         android:id="@+id/progressDB"
         android:visibility="gone"

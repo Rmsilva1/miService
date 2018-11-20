@@ -27,16 +27,6 @@ public class HomeUsuarioActivity extends Activity {
         redirecionarMainActivity(view);
     }
 
-    //TODO
-    public void redirecionarCadastrarServico(View v){
-       // Intent intent = new Intent(HomeUsuarioActivity.this,CadastrarUsuarioActivity.class);
-      //  startActivity(intent);
-    }
-
-    public void redirecionarEditarMeuUsuario(View v){
-        Intent intent = new Intent(HomeUsuarioActivity.this, EditarMeuUsuario.class);
-        startActivity(intent);
-    }
 
     public void redirecionarMainActivity(View v){
         Intent intent = new Intent(HomeUsuarioActivity.this, MainActivity.class);
@@ -55,6 +45,11 @@ public class HomeUsuarioActivity extends Activity {
 
     public void redirecionarDadosCadastraisActivity(View v){
         Intent intent = new Intent(HomeUsuarioActivity.this, DadosCadastraisActivity.class);
+        startActivity(intent);
+    }
+
+    public void redirecionarExcluirUsuario(View v){
+        Intent intent = new Intent(HomeUsuarioActivity.this, ExcluirUsuarioActivity.class);
         startActivity(intent);
     }
 }

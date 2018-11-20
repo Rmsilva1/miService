@@ -8,14 +8,14 @@
     tools:context="com.iservice.opet.iservice.activity.HomeUsuarioActivity">
 
     <Button
-        android:id="@+id/btnAcessaCadastrarServico"
+        android:id="@+id/btnAcessarExcluirMeuUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="296dp"
-        android:onClick="redirecionarCadastrarServico"
-        android:text="Cadastrar Servico "
+        android:onClick="redirecionarExcluirUsuario"
+        android:text="EXCLUIR MEU USUARIO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -33,7 +33,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAcessaCadastrarServico"
+        app:layout_constraintTop_toBottomOf="@+id/btnAcessarExcluirMeuUsuario"
         app:layout_constraintVertical_bias="0.139" />
 
     <Button
@@ -46,7 +46,7 @@
         android:layout_marginBottom="8dp"
         android:onClick="redirecionarListarUsuarios"
         android:text="Listar Todos os Usuarios"
-        app:layout_constraintBottom_toTopOf="@+id/btnAcessaCadastrarServico"
+        app:layout_constraintBottom_toTopOf="@+id/btnAcessaEditarServico"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +94,7 @@
         android:layout_marginBottom="20dp"
         android:onClick="redirecionarDadosCadastraisActivity"
         android:text="Meus dados Cadastrais"
-        app:layout_constraintBottom_toTopOf="@+id/btnAcessaCadastrarServico"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
